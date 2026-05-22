@@ -1,0 +1,7 @@
+/.idea
+/bitrix
+/.php_cs.cache
+/vendor
+/composer.lock
+/tmp
+/package-lock.json
