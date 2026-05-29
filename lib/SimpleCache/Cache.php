@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Kosmosafive\ProductionCalendar\SimpleCache;
+namespace Kosmosafive\ProductionCalendarBx\SimpleCache;
 
 use DateInterval;
 use DateTimeImmutable;
-use Kosmosafive\ProductionCalendar\ValueObject\Holiday;
+use Kosmosafive\ProductionCalendar\ValueObject\Day;
 use Psr\SimpleCache\CacheInterface;
 
 class Cache implements CacheInterface
@@ -26,9 +26,9 @@ class Cache implements CacheInterface
             file_get_contents($this->folder . $key),
             [
                 'allowed_classes' => [
-                    Holiday::class,
-                    DateTimeImmutable::class
-                ]
+                    Day::class,
+                    DateTimeImmutable::class,
+                ],
             ]
         );
     }
@@ -37,7 +37,7 @@ class Cache implements CacheInterface
     {
         if (
             !file_exists($this->folder)
-            && !mkdir($concurrentDirectory = $this->folder, 0777, true)
+            && !mkdir($concurrentDirectory = $this->folder, 0o777, true)
             && !is_dir($concurrentDirectory)
         ) {
             throw new \RuntimeException(sprintf('Directory "%s" was not created', $concurrentDirectory));

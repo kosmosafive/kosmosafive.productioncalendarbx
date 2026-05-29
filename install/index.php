@@ -12,9 +12,9 @@ use Bitrix\Main\Localization\Loc;
 use Bitrix\Main\ModuleManager;
 use Kosmosafive\CommandLine\Application\Handler;
 
-class kosmosafive_productioncalendar extends CModule
+class kosmosafive_productioncalendarbx extends CModule
 {
-    public $MODULE_ID = 'kosmosafive.productioncalendar';
+    public $MODULE_ID = 'kosmosafive.productioncalendarbx';
     public $MODULE_VERSION;
     public $MODULE_VERSION_DATE;
     public $MODULE_NAME;

@@ -1,7 +1,7 @@
 {
   "name": "kosmosafive/kosmosafive.productioncalendar",
   "description": "Производственный календарь",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "homepage": "https://github.com/kosmosafive/kosmosafive.productioncalendar",
   "type": "bitrix-d7-module",
   "minimum-stability": "stable",

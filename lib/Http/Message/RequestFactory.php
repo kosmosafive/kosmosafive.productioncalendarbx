@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Kosmosafive\ProductionCalendar\Http\Message;
+namespace Kosmosafive\ProductionCalendarBx\Http\Message;
 
 use Bitrix\Main\Web\Http\Request;
 use Bitrix\Main\Web\Uri;

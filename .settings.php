@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 use Bitrix\Main\Application;
 use Bitrix\Main\Config\Configuration;
-use Kosmosafive\ProductionCalendar\Http\Message\RequestFactory;
-use Kosmosafive\ProductionCalendar\Service;
+use Kosmosafive\ProductionCalendarBx\Http\Message\RequestFactory;
+use Kosmosafive\ProductionCalendarBx\Service;
 use Bitrix\Main\Web\HttpClient;
-use Kosmosafive\ProductionCalendar\SimpleCache\Cache;
+use Kosmosafive\ProductionCalendarBx\SimpleCache\Cache;
 use Kosmosafive\ProductionCalendar\Provider;
 
 return [
@@ -15,7 +15,7 @@ return [
         'value' => [
             Service\ProductionCalendarServiceInterface::class => [
                 'constructor' => static function () {
-                    $moduleId = 'kosmosafive.productioncalendar';
+                    $moduleId = 'kosmosafive.productioncalendarbx';
                     $moduleConfiguration = (array)Configuration::getInstance()->get($moduleId);
 
                     $httpClient = new HttpClient($moduleConfiguration['http_client'] ?? null);
@@ -28,6 +28,7 @@ return [
 
                     $composite = new Provider\CompositeProvider(
                         new Provider\JsonProvider($folder . 'custom'),
+                        new Provider\XmlProvider($folder . 'custom'),
                         new Provider\CachedProvider($apiProvider, $cache)
                     );
 
