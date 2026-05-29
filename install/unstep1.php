@@ -13,7 +13,7 @@ Loc::loadMessages(__FILE__);
 <form action="<?= $APPLICATION->GetCurPage() ?>">
     <?= bitrix_sessid_post() ?>
     <input type="hidden" name="lang" value="<?= LANGUAGE_ID ?>">
-    <input type="hidden" name="id" value="kosmosafive.productioncalendar">
+    <input type="hidden" name="id" value="kosmosafive.productioncalendarbx">
     <input type="hidden" name="uninstall" value="Y">
     <input type="hidden" name="step" value="2">
     <?php \CAdminMessage::ShowMessage(Loc::getMessage("MOD_UNINST_WARN")) ?>
