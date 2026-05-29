@@ -1,8 +1,8 @@
 {
-  "name": "kosmosafive/kosmosafive.productioncalendar",
+  "name": "kosmosafive/kosmosafive.productioncalendarbx",
   "description": "Производственный календарь",
   "license": "MIT",
-  "homepage": "https://github.com/kosmosafive/kosmosafive.productioncalendar",
+  "homepage": "https://github.com/kosmosafive/kosmosafive.productioncalendarbx",
   "type": "bitrix-d7-module",
   "minimum-stability": "stable",
   "keywords": [
@@ -52,6 +52,6 @@
   },
   "support": {
     "issues": "https://github.com",
-    "source": "https://github.com/kosmosafive/kosmosafive.productioncalendar"
+    "source": "https://github.com/kosmosafive/kosmosafive.productioncalendarbx"
   }
 }
